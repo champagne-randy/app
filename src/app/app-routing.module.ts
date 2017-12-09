@@ -15,6 +15,9 @@ import {
 import { 
 	UserAuthComponent 
 } 							from './user-auth/user-auth.component';
+import { 
+	ClassroomComponent 
+} 							from './classroom/classroom.component';
 
 
 
@@ -22,8 +25,12 @@ const routes: Routes = [
 	// paths
 	{ 
 		path: '',  	
-		component: UserAuthComponent 
+		component: ClassroomComponent 
 	},
+	//{ 
+	//	path: 'login',  	
+	//	component: UserAuthComponent 
+	//},
 	//{ 
 	//	path: 'map',  	
 	//	component: MindMapComponent 

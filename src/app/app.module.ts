@@ -33,6 +33,9 @@ import {
 import { 
 	UserAuthComponent 
 } 							from './user-auth/user-auth.component';
+import { 
+	ClassroomComponent 
+} 							from './classroom/classroom.component';
 
 
 
@@ -44,6 +47,7 @@ import {
 		MindMapComponent,
 		UserAuthComponent,
 		VersionComponent,
+		ClassroomComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -59,7 +63,7 @@ import {
 export class AppModule { 
 
   constructor(router: Router) {
-    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+    //console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
   }
 
 }
