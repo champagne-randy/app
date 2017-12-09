@@ -1,35 +1,42 @@
 import { 
 	NgModule 
-}								from '@angular/core';
+}							from '@angular/core';
 import { 
 	RouterModule, 
 	Routes 
-} 								from '@angular/router';
+} 							from '@angular/router';
 
 import { 
 	FileUploadComponent 
-}								from './file-upload/file-upload.component';
+}							from './file-upload/file-upload.component';
 import { 
 	MindMapComponent 
-}								from './mind-map/mind-map.component'
+}							from './mind-map/mind-map.component'
+import { 
+	UserAuthComponent 
+} 							from './user-auth/user-auth.component';
 
 
 
 const routes: Routes = [
 	// paths
 	{ 
-		path: 'upload',  	
-		component: FileUploadComponent 
+		path: 'login',  	
+		component: UserAuthComponent 
 	},
 	{ 
 		path: 'map',  	
 		component: MindMapComponent 
 	},
+	{ 
+		path: 'upload',  	
+		component: FileUploadComponent 
+	},
 
 	// redirects
 	{ 
 		path: '', 
-		redirectTo: '/upload', 
+		redirectTo: '/login', 
 		pathMatch: 'full' 
 	},
 ];

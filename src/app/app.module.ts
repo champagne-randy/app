@@ -6,8 +6,7 @@ import {
 	NgModule 
 } 							from '@angular/core';
 import { 
-	RouterModule,
-	Routes 
+	Router 
 }							from '@angular/router';
 
 // Project routes
@@ -31,6 +30,9 @@ import {
 import { 
 	HotjarComponent 
 } 							from './analytics/hotjar.component';
+import { 
+	UserAuthComponent 
+} 							from './user-auth/user-auth.component';
 
 
 
@@ -38,22 +40,14 @@ import {
 	declarations: [
 		AppComponent,
 		FileUploadComponent,
+		HotjarComponent,
 		MindMapComponent,
+		UserAuthComponent,
 		VersionComponent,
-		HotjarComponent
 	],
 	imports: [
 		BrowserModule,
-		RouterModule.forRoot([
-			{
-				path: 'upload',
-				component: FileUploadComponent
-			},
-			{
-				path: 'map',
-				component: MindMapComponent
-			},
-		])
+		AppRoutingModule,
 	],
 	providers: [
 
@@ -62,4 +56,15 @@ import {
 		AppComponent
 	]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+
+}
+
+
+
+
+
