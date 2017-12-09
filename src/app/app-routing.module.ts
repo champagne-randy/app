@@ -21,24 +21,24 @@ import {
 const routes: Routes = [
 	// paths
 	{ 
-		path: 'login',  	
+		path: '',  	
 		component: UserAuthComponent 
 	},
-	{ 
-		path: 'map',  	
-		component: MindMapComponent 
-	},
-	{ 
-		path: 'upload',  	
-		component: FileUploadComponent 
-	},
+	//{ 
+	//	path: 'map',  	
+	//	component: MindMapComponent 
+	//},
+	//{ 
+	//	path: 'upload',  	
+	//	component: FileUploadComponent 
+	//},
 
 	// redirects
-	{ 
-		path: '', 
-		redirectTo: '/login', 
-		pathMatch: 'full' 
-	},
+	//{ 
+	//	path: '', 
+	//	redirectTo: '/login', 
+	//	pathMatch: 'full' 
+	//},
 ];
 
 
