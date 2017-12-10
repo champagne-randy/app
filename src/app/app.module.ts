@@ -5,9 +5,6 @@ import {
 import { 
 	NgModule 
 } 							from '@angular/core';
-import { 
-	Router 
-}							from '@angular/router';
 
 // Project routes
 import { 
@@ -28,9 +25,6 @@ import {
 	VersionComponent 
 } 							from './version/version.component';
 import { 
-	HotjarComponent 
-} 							from './analytics/hotjar.component';
-import { 
 	UserAuthComponent 
 } 							from './user-auth/user-auth.component';
 import { 
@@ -40,18 +34,17 @@ import {
 
 
 @NgModule({
+	imports: [
+		BrowserModule,
+		AppRoutingModule
+	],
 	declarations: [
 		AppComponent,
 		FileUploadComponent,
-		HotjarComponent,
 		MindMapComponent,
 		UserAuthComponent,
 		VersionComponent,
-		ClassroomComponent,
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
+		ClassroomComponent
 	],
 	providers: [
 
@@ -60,13 +53,7 @@ import {
 		AppComponent
 	]
 })
-export class AppModule { 
-
-  constructor(router: Router) {
-    //console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
-  }
-
-}
+export class AppModule { }
 
 
 

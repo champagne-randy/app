@@ -24,34 +24,41 @@ import {
 const routes: Routes = [
 	// paths
 	{ 
-		path: '',  	
+		path: 'classroom',  	
 		component: ClassroomComponent 
 	},
-	//{ 
-	//	path: 'login',  	
-	//	component: UserAuthComponent 
-	//},
-	//{ 
-	//	path: 'map',  	
-	//	component: MindMapComponent 
-	//},
-	//{ 
-	//	path: 'upload',  	
-	//	component: FileUploadComponent 
-	//},
+	{ 
+		path: 'login',  	
+		component: UserAuthComponent 
+	},
+	{ 
+		path: 'map',  	
+		component: MindMapComponent 
+	},
+	{ 
+		path: 'upload',  	
+		component: FileUploadComponent 
+	},
 
 	// redirects
-	//{ 
-	//	path: '', 
-	//	redirectTo: '/login', 
-	//	pathMatch: 'full' 
-	//},
+	{ 
+		path: '', 
+		redirectTo: '/login', 
+		pathMatch: 'full' 
+	},
 ];
 
 
 @NgModule({
-	imports: [ RouterModule.forRoot(routes) ],
-	exports: [ RouterModule ]
+	imports: [ 
+		RouterModule.forRoot(
+			routes, 
+			{enableTracing: true}
+		) 
+	],
+	exports: [ 
+		RouterModule 
+	]
 })
 
 
